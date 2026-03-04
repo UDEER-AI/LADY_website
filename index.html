@@ -357,6 +357,9 @@ Transformers</h1>
       <h2 class="title is-4 has-text-centered">
         State-of-the-art results on NAVSIM-v1, and Bench2Drive benchmarks.
       </h2>
+      <h3 class="title is-5 has-text-centered" style="margin-top: 1.5rem;">
+        Navsim v1
+      </h3>
       <div class="columns is-centered">
         <div class="column is-10">
           <img
@@ -367,29 +370,29 @@ Transformers</h1>
           />
           <div style="margin-top: 1.25rem;">
             <img
-              src="static/images/experiments/Bench2drive_table.png"
-              alt="Bench2Drive benchmark results table"
+              src="static/images/experiments/exp_demons.png"
+              alt="NAVSIM-v1 visualized results"
               loading="lazy"
               style="width: 100%; height: auto;"
             />
           </div>
         </div>
       </div>
-      <h2 class="title is-4 has-text-centered" style="margin-top: 2rem;">
-        Visualized Results
-      </h2>
+      <h3 class="title is-5 has-text-centered" style="margin-top: 2rem;">
+        Bench2Drive
+      </h3>
       <div class="columns is-centered">
         <div class="column is-10">
           <img
-            src="static/images/experiments/exp_demons.png"
-            alt="Visualized results overview"
+            src="static/images/experiments/Bench2drive_table.png"
+            alt="Bench2Drive benchmark results table"
             loading="lazy"
             style="width: 100%; height: auto;"
           />
           <div style="margin-top: 1.25rem;">
             <img
               src="static/images/experiments/long_case.png"
-              alt="Visualized long case results"
+              alt="Bench2Drive long case results"
               loading="lazy"
               style="width: 100%; height: auto;"
             />
@@ -397,7 +400,7 @@ Transformers</h1>
           <div style="margin-top: 1.25rem;">
             <img
               src="static/images/experiments/intersection_case.png"
-              alt="Visualized intersection case results"
+              alt="Bench2Drive intersection case results"
               loading="lazy"
               style="width: 100%; height: auto;"
             />
@@ -415,7 +418,7 @@ Transformers</h1>
   <div class="hero-body">
     <div class="container has-text-centered">
       <h2 class="title is-4">
-        Inference time and memory usage comparison between Transfuser, DRAMA, DiffusionDrive, and our approach LADY.
+        Inference time and memory usage comparison
       </h2>
       <div class="columns is-centered">
         <div class="column is-6">
@@ -435,6 +438,9 @@ Transformers</h1>
           />
         </div>
       </div>
+      <p class="has-text-justified" style="margin-top: 1.25rem;">
+        On NVIDIA Orin, LADY maintains roughly constant latency (~187 ms) and memory usage (~400 MB) as frame count grows by updating a fixed-size temporal state. Transformer-based methods (Transfuser, DiffusionDrive) and DRAMA scale with history length, leading to rapidly increasing time and memory. This highlights LADY's constant-time, constant-memory profile for long-horizon, real-time driving.
+      </p>
     </div>
   </div>
 </section>
