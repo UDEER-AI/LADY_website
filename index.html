@@ -438,7 +438,7 @@ Transformers</h1>
           />
         </div>
       </div>
-      <p class="has-text-justified" style="margin-top: 1.25rem;">
+      <p class="has-text-justified" style="margin-top: 1.25rem; font-size: 1.1rem;">
         On NVIDIA Orin, LADY maintains roughly constant latency (~187 ms) and memory usage (~400 MB) as frame count grows by updating a fixed-size temporal state. Transformer-based methods (Transfuser, DiffusionDrive) and DRAMA scale with history length, leading to rapidly increasing time and memory. This highlights LADY's constant-time, constant-memory profile for long-horizon, real-time driving.
       </p>
     </div>
@@ -473,7 +473,7 @@ Transformers</h1>
           </div>
         </div>
       </div>
-      <p class="has-text-justified" style="margin-top: 1.25rem;">
+      <p class="has-text-justified" style="margin-top: 1.25rem; font-size: 1.1rem;">
         Increasing temporal history improves performance, and LADY generalizes beyond its training window by updating a compact temporal state, maintaining or improving results when input frames exceed the training length. Models lacking a fully linear design (Transfuser, DiffusionDrive, DRAMA, and a LADY variant with standard cross-attention) degrade as history grows, while LICA consistently yields stronger accuracy and temporal extrapolation. This highlights LADY's ability to aggregate long-range temporal context efficiently for real-time driving.
       </p>
     </div>
