@@ -350,12 +350,42 @@ Transformers</h1>
 <!-- End paper abstract -->
 
 <!-- Teaser video-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title is-4">architecture of linear cross-attention block</h2>
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <img
+            src="static/images/experiments/cross.png"
+            alt="Architecture of the linear cross-attention block"
+            loading="lazy"
+            style="width: 100%; height: auto;"
+          />
+        </div>
+      </div>
+      <p class="has-text-justified" style="margin-top: 1.25rem; font-size: 1.1rem;">
+        The decoder generates multi-modal trajectory candidates, each represented as a sequence of N waypoints
+        (x_t, y_t, theta_t) in the ego-centric frame over the prediction horizon. Learnable queries interact with
+        augmented BEV-ego representations to decode trajectories. Standard Transformer cross-attention incurs
+        quadratic cost, conflicting with LADY's fully linear design. We propose LICA, a generic linear
+        cross-attention mechanism: (1) query encoding via a linear attention block (RWKV-7) to capture positional
+        dependencies, (2) sequence concatenation of context features and encoded queries into a unified stream,
+        and (3) state-based conditioning with a second RWKV-7 block where the recurrent state accumulates context
+        semantics and conditions subsequent query tokens. The last M query tokens are extracted as the
+        cross-attention output. This reformulation yields linear scaling with sequence length while preserving
+        the fully linear attention of LADY.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="hero teaser">
   <div class="container is-max-widescreen">
     <div class="hero-body">
       <!-- TODO: Replace with your video description -->
       <h2 class="title is-4 has-text-centered">
-        State-of-the-art results on NAVSIM-v1, and Bench2Drive benchmarks.
+        Comparison with SOTA methods on NAVSIM-v1 and Bench2Drive benchmarks.
       </h2>
       <h3 class="title is-5 has-text-centered" style="margin-top: 1.5rem;">
         Navsim v1
