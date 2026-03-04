@@ -353,7 +353,7 @@ Transformers</h1>
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h2 class="title is-4">architecture of linear cross-attention block</h2>
+      <h2 class="title is-4">Architecture of Linear Cross-Attention Block</h2>
       <div class="columns is-centered">
         <div class="column is-10">
           <img
@@ -498,7 +498,17 @@ Transformers</h1>
         </div>
       </div>
       <p class="has-text-justified" style="margin-top: 1.25rem; font-size: 1.1rem;">
-        Ablation study on temporal generalization: performance of the model trained with a fixed history window when evaluating on varying inference sequence lengths.
+        Effectiveness of historical frame count: extending DiffusionDrive to multi-frame inputs improves PDMS
+        from 88.1 to 89.3, confirming the benefit of temporal integration. We train LADY with a fixed 10-frame
+        history and evaluate varying inference lengths. Shorter sequences (<10) reduce performance, while longer
+        sequences (>10) exploit LADY's linear attention to update temporal hidden state and can surpass the
+        fixed-frame baseline, demonstrating temporal extrapolation for continuous driving. Training with richer
+        history (10 vs. 4 frames) further boosts performance and robustness when inference length exceeds the
+        training horizon. Effectiveness of the LICA module: replacing LICA with standard Transformer
+        cross-attention under identical 10-frame training shows LICA consistently outperforming across settings.
+        LICA preserves stable or improved performance for >10-frame inference, while standard cross-attention
+        degrades sharply, highlighting LICA's superior temporal extrapolation and its ability to aggregate
+        long-range multi-frame camera and LiDAR context efficiently.
       </p>
     </div>
   </div>
