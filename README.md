@@ -35,13 +35,6 @@ Key contributions include:
    - Generates BEV (Bird's Eye View) feature representations
    - Decodes trajectories through learnable queries
 
-
-### Network Architecture
-
-- **Encoder**: Processes multi-frame camera and LiDAR inputs, generating augmented BEV-ego representations
-- **Decoder**: Generates multi-modal trajectory candidates, each represented as a sequence of N waypoints (x_t, y_t, θ_t)
-- **LICA Module**: Enables cross-modal interaction, replacing traditional quadratic Transformer cross-attention
-
 ## Evaluation Benchmarks
 
 ### Main Benchmarks
